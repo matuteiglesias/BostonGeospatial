@@ -1,0 +1,99 @@
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset='utf-8' />
+      <title>Display a map with a custom style</title>
+      <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+      <style>
+         body { margin:0; padding:0; }
+         h2,
+         h3 {margin: 10px;font-size: 1.2em;}
+         h3 {font-size: 1em;}
+         p {font-size: 0.85em; margin: 10px; text-align: left; }
+         #map { position:absolute; top:0; bottom:0; width:100%; }
+         #menu {
+         position: absolute;
+         z-index: 99999;
+         background: #fff;
+         padding: 10px;
+         font-family: 'Open Sans', sans-serif;
+         }
+         .map-overlay {
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         background: rgba(255, 255, 255, 0.8);
+         margin-right: 20px;
+         font-family: Arial, sans-serif;
+         overflow: auto;
+         border-radius: 3px;
+         }
+         #features {
+         position: absolute;
+         top: 0;
+         height: 1050px;
+         margin-top: 20px;
+         width: 350px;
+         }
+      </style>
+   </head>
+   <body>
+      <div id='menu'>
+         <input id='cjtoyymaw51nr1fl5phtfzfyj' type='radio' name='rtoggle' value='capa_A' checked='checked'>
+         <label for='capa_A'>capa_A</label>
+         <input id='cjtoyr7pu0ce31frtg18sda5u' type='radio' name='rtoggle' value='capa_B'>
+         <label for='capa_B'>capa_B</label>
+         <input id='cjtoyk8pr3vo31fqdx1pti76v' type='radio' name='rtoggle' value='capa_C'>
+         <label for='capa_C'>capa_C</label>
+      </div>
+      <div id='map'></div>
+      <div class='map-overlay' id='features'>
+         <h2>Aditional Info</h2>
+         <div id='pd'>
+            <p>Hover over map. Use zoom.</p>
+         </div>
+      </div>
+      <div class='map-overlay' id='legend'></div>
+      <script>
+         mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dXRlaWdsZXNpYXMiLCJhIjoiY2ptdGN1bjViMDY4MzNxcDEyMXQ4ejU4bCJ9.wOgfXtbyetTot1CZN8D6Hg';
+         var map = new mapboxgl.Map({
+         container: 'map', // container id
+         style: 'mapbox://styles/matuteiglesias/cjtoyymaw51nr1fl5phtfzfyj', //hosted style id
+         center: [-71.06, 42.36],
+         zoom: 12
+         });
+         
+         map.getCanvas().style.cursor = 'default';
+         
+	 map.on('mousemove', function(e) {
+         var areas = map.queryRenderedFeatures(e.point, {
+         layers: ['areas']
+         });
+	 
+         if (areas.length > 0) {      
+         document.getElementById('pd').innerHTML = 
+          'RADIO'} else {
+         document.getElementById('pd').innerHTML = '<p>Hover over map. Use zoom.</p>';
+         }
+         });
+         
+         var layerList = document.getElementById('menu');
+         var inputs = layerList.getElementsByTagName('input');
+         
+         function switchLayer(layer) {
+         var layerId = layer.target.id;
+         map.setStyle('mapbox://styles/matuteiglesias/' + layerId);
+         }
+         
+         for (var i = 0; i < inputs.length; i++) {
+         inputs[i].onclick = switchLayer;
+         }
+      </script>
+   </body>
+</html>
+
+
