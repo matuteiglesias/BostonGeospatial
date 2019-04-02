@@ -35,7 +35,7 @@
          #features {
          position: absolute;
          top: 0;
-         height: 1050px;
+         height: 90px;
          margin-top: 20px;
          width: 350px;
          }
@@ -44,15 +44,19 @@
    <body>
       <div id='menu'>
          <input id='cjtoyymaw51nr1fl5phtfzfyj' type='radio' name='rtoggle' value='capa_A' checked='checked'>
-         <label for='capa_A'>capa_A</label>
+         <label for='capa_A'>Precincts and Polling</label>
          <input id='cjtoyr7pu0ce31frtg18sda5u' type='radio' name='rtoggle' value='capa_B'>
-         <label for='capa_B'>capa_B</label>
+         <label for='capa_B'>Wards</label>
          <input id='cjtoyk8pr3vo31fqdx1pti76v' type='radio' name='rtoggle' value='capa_C'>
-         <label for='capa_C'>capa_C</label>
+         <label for='capa_C'>City Council Districts</label>
+         <input id='cjtoygnge6m7k1fmkq9nashr6' type='radio' name='rtoggle' value='capa_D'>
+         <label for='capa_D'>Neighborhoods</label>
+         <input id='cjtoxqv9741n61ftnnpmjy006' type='radio' name='rtoggle' value='capa_E'>
+         <label for='capa_E'>ZIP Codes</label>
       </div>
       <div id='map'></div>
       <div class='map-overlay' id='features'>
-         <h2>Aditional Info</h2>
+         <h2>Boston Administrative Areas</h2>
          <div id='pd'>
             <p>Hover over map. Use zoom.</p>
          </div>
@@ -76,7 +80,7 @@
 	 
          if (areas.length > 0) {      
          document.getElementById('pd').innerHTML = 
-          'RADIO'} else {
+          ''} else {
          document.getElementById('pd').innerHTML = '<p>Hover over map. Use zoom.</p>';
          }
          });
