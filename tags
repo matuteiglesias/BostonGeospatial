@@ -1,0 +1,29 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/matias/repos/BostonGeospatial/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+Background	README.md	/^## Background$/;"	s	chapter:BostonGeospatial
+Boston Administrative Areas	interactive_map.html	/^         <h2>Boston Administrative Areas<\/h2>$/;"	i
+BostonGeospatial	README.md	/^# BostonGeospatial$/;"	c
+cjtoxqv9741n61ftnnpmjy006	interactive_map.html	/^         <input id='cjtoxqv9741n61ftnnpmjy006' type='radio' name='rtoggle' value='capa_E'>$/;"	I
+cjtoygnge6m7k1fmkq9nashr6	interactive_map.html	/^         <input id='cjtoygnge6m7k1fmkq9nashr6' type='radio' name='rtoggle' value='capa_D'>$/;"	I
+cjtoyk8pr3vo31fqdx1pti76v	interactive_map.html	/^         <input id='cjtoyk8pr3vo31fqdx1pti76v' type='radio' name='rtoggle' value='capa_C'>$/;"	I
+cjtoyr7pu0ce31frtg18sda5u	interactive_map.html	/^         <input id='cjtoyr7pu0ce31frtg18sda5u' type='radio' name='rtoggle' value='capa_B'>$/;"	I
+cjtoyymaw51nr1fl5phtfzfyj	interactive_map.html	/^         <input id='cjtoyymaw51nr1fl5phtfzfyj' type='radio' name='rtoggle' value='capa_A' checke/;"	I
+df_to_geojson	modules/mapbox_tools.py	/^def df_to_geojson(df, properties, type_, coordinates):$/;"	f
+features	interactive_map.html	/^      <div class='map-overlay' id='features'>$/;"	I
+legend	interactive_map.html	/^      <div class='map-overlay' id='legend'><\/div>$/;"	I
+map	interactive_map.html	/^      <div id='map'><\/div>$/;"	I
+menu	interactive_map.html	/^      <div id='menu'>$/;"	I
+pd	interactive_map.html	/^         <div id='pd'>$/;"	I
+service	modules/mapbox_tools.py	/^service = Uploader(access_token=token)$/;"	v
+token	modules/mapbox_tools.py	/^token = 'sk.eyJ1IjoibWF0dXRlaWdsZXNpYXMiLCJhIjoiY2puODA4bW8xMGV1dzNrcGtiOGp6NXQ5aCJ9.DohKmjn_o6M/;"	v
+upload_file	modules/mapbox_tools.py	/^def upload_file(data, name, username = 'matuteiglesias', token = 'sk.eyJ1IjoibWF0dXRlaWdsZXNpYXM/;"	f
+username	modules/mapbox_tools.py	/^username = 'matuteiglesias'$/;"	v
